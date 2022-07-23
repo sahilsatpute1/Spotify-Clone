@@ -84,6 +84,10 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         //makeAllPlays();
         if(e.target.classList.contains('fa-play-circle')) {
             songIndex = parseInt(e.target.id);
+            Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+                element.classList.remove('fa-pause-circle');
+                element.classList.add('fa-play-circle');
+            })
             e.target.classList.remove('fa-play-circle');
             e.target.classList.add('fa-pause-circle');
             audioElement.src = `songs/${songIndex+1}.mp3`;
