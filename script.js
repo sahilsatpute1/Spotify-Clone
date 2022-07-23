@@ -70,18 +70,9 @@ myProgressBar.addEventListener('change', ()=>{
     audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
 })
 
-// const makeAllPlays = ()=>{
-//     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
-//         element.classList.remove('fa-pause-circle');
-//         element.classList.add('fa-play-circle');
-//     })
-// }
-
-
 
 Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
     element.addEventListener('click', (e)=>{ 
-        //makeAllPlays();
         if(e.target.classList.contains('fa-play-circle')) {
             songIndex = parseInt(e.target.id);
             Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
